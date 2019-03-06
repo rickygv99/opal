@@ -1,19 +1,19 @@
-#What is Opal?
+# What is Opal?
 Opal is a stack-based programming language for code golf.
 
-##Operators
+## Operators
 | Operation |  | Operator | Example input | Example output |
 | ----------- | ----------- | ----------- | ----------- |
 | Addition | + | 34+ | 7 |
 | Subtraction | - | 23- | -1 |
 
-##Outputs for example programs
+## Outputs for example programs
 ---
-###hello_world
+### hello_world
 `Hello World!`
 
-###sum
+### sum
 `3`
 
-###square_root
+### square_root
 `3`
