@@ -29,6 +29,12 @@ class Interpreter:
                     number = str(values[0]) + number
                 if len(number) is not 0:
                     stack.append(int(number))
+            elif character is 'q': # Get keyboard input from user
+                i = input()
+                if i.isnumeric():
+                    stack.append(self.trimTrailingZeroes(float(i)))
+                else:
+                    stack.append(i)
             elif character is '~': # Negation
                 values = self.getValues(stack, 1)
                 stack.append(values[0] * -1)
