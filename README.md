@@ -34,7 +34,7 @@ Operators which manipulate the values in the program stack are defined below.
 | Pi | p | p | 3.141592653589793 |
 | e | e | e | 2.71828182846 |
 | Is prime? | v | 7v | True |
-| Euclidean distance | d | 0043 | 5 |
+| Euclidean distance | d | 0043d | 5 |
 
 ## Example programs
 ### hello_world
