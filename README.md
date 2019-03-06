@@ -38,30 +38,40 @@ The character *q* is a special character which takes input from the user and sto
 
 ## Example programs
 ### hello_world
+Program: `"Hello World!"`
+
 > Prints "Hello World!"
 
 Output:
 `Hello World!`
 
 ### sum
+Program: `12+`
+
 > Computes sum of 1 and 2
 
 Output:
 `3`
 
 ### square_root
+Program: `9\`
+
 > Computes square root of 9
 
 Output:
 `3`
 
 ### distance
+Program: `0043d`
+
 > Computes Euclidean distance between points (0, 0) and (4, 3)
 
 Output:
 `5`
 
 ### convert_to_fahrenheit
+Program: `q1.8*32@+`
+
 > Takes input from the user representing temperature in degrees Celsius. Converts to temperature in degrees Fahrenheit.
 
 Example input:
