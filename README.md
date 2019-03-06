@@ -28,12 +28,21 @@ Opal is a stack-based programming language for code golf.
 | e | e | e | 2.71828182846 |
 | Is prime? | v | 7v | True |
 
-## Outputs for example programs
+## Example programs
 ### hello_world
+> Prints "Hello World!"
+
+Output:
 `Hello World!`
 
 ### sum
+> Computes sum of 1 and 2
+
+Output:
 `3`
 
 ### square_root
+> Computes square root of 9
+
+Output:
 `3`
