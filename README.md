@@ -33,6 +33,7 @@ The character *q* is a special character which takes input from the user and sto
 | Logarithm | b | 82b | 3 |
 | Pi | p | p | 3.141592653589793 |
 | e | e | e | 2.71828182846 |
+| Generate random float in [0, 1) | R | R | 0.6745571862859855 |
 | Is prime? | v | 7v | True |
 | Euclidean distance | d | 0043d | 5 |
 
@@ -79,3 +80,11 @@ Example input:
 
 Example output:
 `99.5`
+
+### random
+Program: `R10@*)`
+
+> Generates random integer in [0, 9]
+
+Example output:
+`6`

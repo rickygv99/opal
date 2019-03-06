@@ -1,5 +1,6 @@
 import sys
 import math
+import random
 
 class Interpreter:
     def runProgram(self, program):
@@ -138,6 +139,8 @@ class Interpreter:
             elif character is 'C': # Calculates number of combinations
                 values = self.getValues(stack, 2)
                 stack.append(math.factorial(values[0]) / (math.factorial(values[1]) * math.factorial(values[0] - values[1])))
+            elif character is 'R': # Pushes random number onto stack
+                stack.append(random.random())
             elif character is 'y': # Pops last element of stack
                 self.getValues(stack, 1)
             elif character is ';': # Swaps top two elements of stack
