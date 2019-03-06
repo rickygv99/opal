@@ -145,13 +145,21 @@ class Interpreter:
             return num
 
 def main():
-    if len(sys.argv) is not 2:
+    if len(sys.argv) is not 2 and len(sys.argv) is not 3:
         sys.exit()
 
     program = ''
-    f = open(sys.argv[1], 'r')
-    program = f.read()
-    f.close()
+
+    if len(sys.argv) is 2:
+        f = open(sys.argv[1], 'r')
+        program = f.read()
+        f.close()
+
+    if len(sys.argv) is 3:
+        if not (sys.argv[2] == '-d'):
+            print(sys.argv[2] + " is not a valid command-line flag.")
+            sys.exit(-1)
+        program = sys.argv[1]
 
     output = Interpreter().runProgram(program)
     print(output)
