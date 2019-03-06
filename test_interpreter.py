@@ -113,6 +113,10 @@ class TestInterpreter(unittest.TestCase):
         interpreter = Interpreter()
         self.assertEqual(interpreter.runProgram('53C'), '10', 'Should be 10')
 
+    def test_gcd(self):
+        interpreter = Interpreter()
+        self.assertEqual(interpreter.runProgram('60@48@G'), '12', 'Should be 12')
+
     def test_pop_stack(self):
         interpreter = Interpreter()
         self.assertEqual(interpreter.runProgram('"a""b"y'), 'a', 'Should be a')

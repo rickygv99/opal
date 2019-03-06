@@ -33,13 +33,19 @@ The character *q* is a special character which takes input from the user and sto
 | Logarithm | b | 82b | 3 |
 | Pi | p | p | 3.141592653589793 |
 | e | e | e | 2.718281828459045 |
-| Generate random float in [0, 1) | R | R | 0.6745571862859855 |
 | Is prime? | v | 7v | True |
 | Euclidean distance | d | 0043d | 5 |
+| # of permutations | P | 53P | 60 |
+| # of combinations | C | 53C | 10 |
+| Greatest common divisor | G | 60@48@G | 12 |
+| Generate random float in [0, 1) | R | R | 0.6745571862859855 |
 | TRUE | T | T | True |
 | FALSE | F | F | False |
 | Boolean OR | &#124; | TF&#124; | True |
 | Boolean AND | & | TF& | False |
+| Pop top element off program stack | y | "a""b"y | a |
+| Swap top two elements of program stack | ; | "a""b"; | ba |
+| Duplicate top element of program stack | _ | "a"_ | aa |
 
 ## Example programs
 ### hello_world
