@@ -10,7 +10,7 @@ Operators which manipulate the values in the program stack are defined below.
 
 | Operation | Operator | Example input | Example output |
 | ----------- | ----------- | ----------- | ----------- |
-| Concatenation | @ | 123@ | 123 |
+| Concatenation | @ | 123@1+ | 124 |
 | Negation | ~ | 3~ | -3 |
 | Addition | + | 34+ | 7 |
 | Subtraction | - | 23- | -1 |
