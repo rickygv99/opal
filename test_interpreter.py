@@ -16,6 +16,10 @@ class TestInterpreter(unittest.TestCase):
         self.assertEqual(interpreter.runProgram('123@'), '123', '123')
         self.assertEqual(interpreter.runProgram('123@1+'), '124', '124')
 
+    def test_decimals(self):
+        interpreter = Interpreter()
+        self.assertEqual(interpreter.runProgram('3.45 1+'), '4.45', '4.45')
+
     def test_negation(self):
         interpreter = Interpreter()
         self.assertEqual(interpreter.runProgram('3~'), '-3', 'Should be -3')

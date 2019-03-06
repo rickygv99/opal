@@ -6,8 +6,13 @@ class Interpreter:
         stack = []
         readingList = False
         currentList = []
+        readingDecimal = False
+        currentDecimal = ''
         for character in program:
             #print("Character:" + character + ", Stack:" + str(stack))
+            if readingDecimal and not(character.isdigit()):
+                readingDecimal = False
+                stack.append(float(currentDecimal))
             if character is '\"':
                 if readingList:
                     stack.append(currentList)
@@ -18,7 +23,10 @@ class Interpreter:
             elif character.isspace():
                 pass
             elif character.isdigit():
-                stack.append(int(character))
+                if readingDecimal:
+                    currentDecimal += str(character)
+                else:
+                    stack.append(int(character))
             elif character is '@': # Concatenate all preceding numbers in stack
                 number = ''
                 for i in range(len(stack)):
@@ -29,6 +37,14 @@ class Interpreter:
                     number = str(values[0]) + number
                 if len(number) is not 0:
                     stack.append(int(number))
+            elif character is '.':
+                values = self.getValues(stack, 1)
+                if str(values[0]).isdigit():
+                    currentDecimal += str(values[0])
+                else:
+                    stack.append(values[0])
+                currentDecimal += '.'
+                readingDecimal = True
             elif character is 'q': # Get keyboard input from user
                 i = input()
                 if i.isnumeric():
