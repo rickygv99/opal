@@ -32,7 +32,7 @@ class Interpreter:
                 number = ''
                 for i in range(len(stack)):
                     values = self.getValues(stack, 1)
-                    if not(str(values[0]).isdigit()):
+                    if not(str(values[0]).isdigit()) or values[0] < 0 or values[0] >= 10:
                         stack.append(values[0])
                         break
                     number = str(values[0]) + number
