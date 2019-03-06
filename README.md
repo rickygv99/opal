@@ -10,6 +10,8 @@ Operators which manipulate the values in the program stack are defined below.
 
 | Operation | Operator | Example input | Example output |
 | ----------- | ----------- | ----------- | ----------- |
+| Concatenation | @ | 123@ | 123 |
+| Negation | ~ | 3~ | -3 |
 | Addition | + | 34+ | 7 |
 | Subtraction | - | 23- | -1 |
 | Multiplication | * | 23* | 6 |
@@ -26,12 +28,13 @@ Operators which manipulate the values in the program stack are defined below.
 | Floor function | ) | 35/) | 0 |
 | Absolute value | &#124; | 12-&#124; | 1 |
 | Factorial | ! | 5! | 120 |
-| Logarithm base-10 | l | 2l | 0.30102999566 |
+| Logarithm base-10 | l | 2l | 0.3010299956639812 |
 | Natural logarithm | n | 2n | 0.69314718056 |
 | Logarithm | b | 82b | 3 |
-| Pi | p | p | 3.14159265359 |
+| Pi | p | p | 3.141592653589793 |
 | e | e | e | 2.71828182846 |
 | Is prime? | v | 7v | True |
+| Euclidean distance | d | 0043 | 5 |
 
 ## Example programs
 ### hello_world
