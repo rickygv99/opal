@@ -64,8 +64,8 @@ Output:
 ### convert_to_fahrenheit
 > Takes input from the user representing temperature in degrees Celsius. Converts to temperature in degrees Fahrenheit.
 
-Input:
+Example input:
 `37.5`
 
-Output:
+Example output:
 `99.5`
