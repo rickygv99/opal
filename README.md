@@ -8,7 +8,7 @@ The character *q* is a special character which takes input from the user and sto
 
 ## Operators
 
-| Operation | Operator | Example input | Example output |
+| Operation | Operator | Example program | Example output |
 | ----------- | ----------- | ----------- | ----------- |
 | Concatenation | @ | 123@1+ | 124 |
 | Negation | ~ | 3~ | -3 |
