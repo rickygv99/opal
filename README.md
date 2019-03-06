@@ -36,6 +36,10 @@ The character *q* is a special character which takes input from the user and sto
 | Generate random float in [0, 1) | R | R | 0.6745571862859855 |
 | Is prime? | v | 7v | True |
 | Euclidean distance | d | 0043d | 5 |
+| TRUE | T | T | True |
+| FALSE | F | F | False |
+| Boolean OR | &#124; | TF&#124; | True |
+| Boolean AND | & | TF& | False |
 
 ## Example programs
 ### hello_world
