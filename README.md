@@ -1,6 +1,11 @@
 # What is Opal?
 Opal is a stack-based programming language for code golf.
 
+# Syntax
+All the program memory is contained in a single stack called the *program stack*. Programs are read by the interpreter one character at a time. Numbers consisting of a single digit are appended to the program stack as is. If you want to add a multidigit number to the program stack, you must end the number with the character *@*. Anything enclosed in double quotes *""* is treated as a string. Any values left in the program stack at the end of the program will be concatenated together and outputted as a single string.
+
+Operators which manipulate the values in the program stack are defined below.
+
 ## Operators
 
 | Operation | Operator | Example input | Example output |
