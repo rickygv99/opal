@@ -24,9 +24,9 @@ The character *q* is a special character which takes input from the user and sto
 | Is greater than? | > | 53> | True |
 | Is less than? | < | 53< | False |
 | Is equal? | = | 44= | True |
-| Ceiling function | ( | 35/( | 1 |
-| Floor function | ) | 35/) | 0 |
-| Absolute value | &#124; | 12-&#124; | 1 |
+| Ceiling function | ( | 0.6/( | 1 |
+| Floor function | ) | 0.6/) | 0 |
+| Absolute value | &#124; | 3~&#124; | 3 |
 | Factorial | ! | 5! | 120 |
 | Logarithm base-10 | l | 2l | 0.3010299956639812 |
 | Natural logarithm | n | 2n | 0.69314718056 |
