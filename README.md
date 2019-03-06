@@ -29,10 +29,10 @@ The character *q* is a special character which takes input from the user and sto
 | Absolute value | a | 3~a | 3 |
 | Factorial | ! | 5! | 120 |
 | Logarithm base-10 | l | 2l | 0.3010299956639812 |
-| Natural logarithm | n | 2n | 0.69314718056 |
+| Natural logarithm | n | 2n | 0.6931471805599453 |
 | Logarithm | b | 82b | 3 |
 | Pi | p | p | 3.141592653589793 |
-| e | e | e | 2.71828182846 |
+| e | e | e | 2.718281828459045 |
 | Generate random float in [0, 1) | R | R | 0.6745571862859855 |
 | Is prime? | v | 7v | True |
 | Euclidean distance | d | 0043d | 5 |
