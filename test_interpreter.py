@@ -11,6 +11,15 @@ class TestInterpreter(unittest.TestCase):
         interpreter = Interpreter()
         self.assertEqual(interpreter.runProgram('"Hello World!"'), 'Hello World!', 'Should be Hello World!')
 
+    def test_concat_numbers(self):
+        interpreter = Interpreter()
+        self.assertEqual(interpreter.runProgram('123@'), '123', '123')
+        self.assertEqual(interpreter.runProgram('123@1+'), '124', '124')
+
+    def test_negation(self):
+        interpreter = Interpreter()
+        self.assertEqual(interpreter.runProgram('3~'), '-3', 'Should be -3')
+
     def test_addition(self):
         interpreter = Interpreter()
         self.assertEqual(interpreter.runProgram('35+'), '8', 'Should be 8')
@@ -75,6 +84,14 @@ class TestInterpreter(unittest.TestCase):
         interpreter = Interpreter()
         self.assertEqual(interpreter.runProgram('2l'), '0.3010299956639812', 'Should be 0.3010299956639812')
 
+    def test_pi(self):
+        interpreter = Interpreter()
+        self.assertEqual(interpreter.runProgram('p'), '3.141592653589793', 'Should be 3.141592653589793')
+
+    def test_e(self):
+        interpreter = Interpreter()
+        self.assertEqual(interpreter.runProgram('e'), '2.718281828459045', 'Should be 2.718281828459045')
+
     def test_prime(self):
         interpreter = Interpreter()
         self.assertEqual(interpreter.runProgram('8v'), 'False', 'Should be False')
@@ -83,6 +100,26 @@ class TestInterpreter(unittest.TestCase):
         self.assertEqual(interpreter.runProgram('12-v'), 'False', 'Should be False')
         self.assertEqual(interpreter.runProgram('2v'), 'True', 'Should be True')
         self.assertEqual(interpreter.runProgram('7v'), 'True', 'Should be True')
+
+    def test_num_permutations(self):
+        interpreter = Interpreter()
+        self.assertEqual(interpreter.runProgram('53P'), '60', '60')
+
+    def test_num_combinations(self):
+        interpreter = Interpreter()
+        self.assertEqual(interpreter.runProgram('53C'), '10', '10')
+
+    def test_pop_stack(self):
+        interpreter = Interpreter()
+        self.assertEqual(interpreter.runProgram('"a""b"y'), 'a', 'a')
+
+    def test_swap_top_stack(self):
+        interpreter = Interpreter()
+        self.assertEqual(interpreter.runProgram('"a""b";'), 'ba', 'ba')
+
+    def test_duplicate_top_stack(self):
+        interpreter = Interpreter()
+        self.assertEqual(interpreter.runProgram('"a"_'), 'aa', 'aa')
 
 if __name__ == '__main__':
     unittest.main()

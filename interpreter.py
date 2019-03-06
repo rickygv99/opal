@@ -7,6 +7,7 @@ class Interpreter:
         readingList = False
         currentList = []
         for character in program:
+            #print("Character:" + character + ", Stack:" + str(stack))
             if character is '\"':
                 if readingList:
                     stack.append(currentList)
@@ -18,6 +19,19 @@ class Interpreter:
                 pass
             elif character.isdigit():
                 stack.append(int(character))
+            elif character is '@': # Concatenate all preceding numbers in stack
+                number = ''
+                for i in range(len(stack)):
+                    values = self.getValues(stack, 1)
+                    if not(str(values[0]).isdigit()):
+                        stack.append(values[0])
+                        break
+                    number = str(values[0]) + number
+                if len(number) is not 0:
+                    stack.append(int(number))
+            elif character is '~': # Negation
+                values = self.getValues(stack, 1)
+                stack.append(values[0] * -1)
             elif character is '+': # Addition
                 values = self.getValues(stack, 2)
                 stack.append(values[0] + values[1])
@@ -94,7 +108,7 @@ class Interpreter:
                     stack.append(isPrime)
             elif character is 'd': # Calculates Euclidean distance between two points
                 values = self.getValues(stack, 4)
-                stack.append(math.sqrt((values[0] - values[1]) ** 2 + (values[2] - values[3]) ** 2))
+                stack.append(math.sqrt((values[2] - values[0]) ** 2 + (values[3] - values[1]) ** 2))
             elif character is 'P': # Calculates number of permutations
                 values = self.getValues(stack, 2)
                 stack.append(math.factorial(values[0]) / math.factorial(values[0] - values[1]))
