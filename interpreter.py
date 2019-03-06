@@ -47,9 +47,10 @@ class Interpreter:
                 readingDecimal = True
             elif character is 'q': # Get keyboard input from user
                 i = input()
-                if i.isnumeric():
-                    stack.append(self.trimTrailingZeroes(float(i)))
-                else:
+                try:
+                    value = float(i)
+                    stack.append(self.trimTrailingZeroes(value))
+                except ValueError:
                     stack.append(i)
             elif character is '~': # Negation
                 values = self.getValues(stack, 1)
