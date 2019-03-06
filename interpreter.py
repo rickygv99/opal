@@ -95,7 +95,7 @@ class Interpreter:
             elif character is ')': # Floor function
                 values = self.getValues(stack, 1)
                 stack.append(math.floor(values[0]))
-            elif character is '|': # Absolute value
+            elif character is 'a': # Absolute value
                 values = self.getValues(stack, 1)
                 stack.append(math.fabs(values[0]))
             elif character is '!': # Factorial
@@ -151,6 +151,16 @@ class Interpreter:
                 values = self.getValues(stack, 1)
                 stack.append(values[0])
                 stack.append(values[0])
+            elif character is 'T': # TRUE
+                stack.append(True)
+            elif character is 'F': # FALSE
+                stack.append(False)
+            elif character is '|': # Boolean OR
+                values = self.getValues(stack, 2)
+                stack.append(values[0] or values[1])
+            elif character is '&': # Boolean AND
+                values = self.getValues(stack, 2)
+                stack.append(values[0] and values[1])
             else:
                 self.throwError("Invalid character: " + character)
         output = ''

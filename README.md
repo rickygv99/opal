@@ -26,7 +26,7 @@ The character *q* is a special character which takes input from the user and sto
 | Is equal? | = | 44= | True |
 | Ceiling function | ( | 0.6( | 1 |
 | Floor function | ) | 0.6) | 0 |
-| Absolute value | &#124; | 3~&#124; | 3 |
+| Absolute value | a | 3~a | 3 |
 | Factorial | ! | 5! | 120 |
 | Logarithm base-10 | l | 2l | 0.3010299956639812 |
 | Natural logarithm | n | 2n | 0.69314718056 |

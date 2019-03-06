@@ -70,15 +70,15 @@ class TestInterpreter(unittest.TestCase):
 
     def test_ceiling_function(self):
         interpreter = Interpreter()
-        self.assertEqual(interpreter.runProgram('35/('), '1', 'Should be 1')
+        self.assertEqual(interpreter.runProgram('0.6('), '1', 'Should be 1')
 
     def test_floor_function(self):
         interpreter = Interpreter()
-        self.assertEqual(interpreter.runProgram('35/)'), '0', 'Should be 0')
+        self.assertEqual(interpreter.runProgram('0.6)'), '0', 'Should be 0')
 
     def test_absolute_value(self):
         interpreter = Interpreter()
-        self.assertEqual(interpreter.runProgram('12-|'), '1', 'Should be 1')
+        self.assertEqual(interpreter.runProgram('3~a'), '3', 'Should be 3')
 
     def test_factorial(self):
         interpreter = Interpreter()
@@ -98,32 +98,54 @@ class TestInterpreter(unittest.TestCase):
 
     def test_prime(self):
         interpreter = Interpreter()
-        self.assertEqual(interpreter.runProgram('8v'), 'False', 'Should be False')
+        self.assertEqual(interpreter.runProgram('21@v'), 'False', 'Should be False')
         self.assertEqual(interpreter.runProgram('1v'), 'False', 'Should be False')
         self.assertEqual(interpreter.runProgram('0v'), 'False', 'Should be False')
-        self.assertEqual(interpreter.runProgram('12-v'), 'False', 'Should be False')
+        self.assertEqual(interpreter.runProgram('1~v'), 'False', 'Should be False')
         self.assertEqual(interpreter.runProgram('2v'), 'True', 'Should be True')
-        self.assertEqual(interpreter.runProgram('7v'), 'True', 'Should be True')
+        self.assertEqual(interpreter.runProgram('29@v'), 'True', 'Should be True')
 
     def test_num_permutations(self):
         interpreter = Interpreter()
-        self.assertEqual(interpreter.runProgram('53P'), '60', '60')
+        self.assertEqual(interpreter.runProgram('53P'), '60', 'Should be 60')
 
     def test_num_combinations(self):
         interpreter = Interpreter()
-        self.assertEqual(interpreter.runProgram('53C'), '10', '10')
+        self.assertEqual(interpreter.runProgram('53C'), '10', 'Should be 10')
 
     def test_pop_stack(self):
         interpreter = Interpreter()
-        self.assertEqual(interpreter.runProgram('"a""b"y'), 'a', 'a')
+        self.assertEqual(interpreter.runProgram('"a""b"y'), 'a', 'Should be a')
 
     def test_swap_top_stack(self):
         interpreter = Interpreter()
-        self.assertEqual(interpreter.runProgram('"a""b";'), 'ba', 'ba')
+        self.assertEqual(interpreter.runProgram('"a""b";'), 'ba', 'Should be ba')
 
     def test_duplicate_top_stack(self):
         interpreter = Interpreter()
-        self.assertEqual(interpreter.runProgram('"a"_'), 'aa', 'aa')
+        self.assertEqual(interpreter.runProgram('"a"_'), 'aa', 'Should be aa')
+
+    def test_true(self):
+        interpreter = Interpreter()
+        self.assertEqual(interpreter.runProgram('T'), 'True', 'Should be True')
+
+    def test_false(self):
+        interpreter = Interpreter()
+        self.assertEqual(interpreter.runProgram('F'), 'False', 'Should be False')
+
+    def test_boolean_or(self):
+        interpreter = Interpreter()
+        self.assertEqual(interpreter.runProgram('TT|'), 'True', 'Should be True')
+        self.assertEqual(interpreter.runProgram('TF|'), 'True', 'Should be True')
+        self.assertEqual(interpreter.runProgram('FT|'), 'True', 'Should be True')
+        self.assertEqual(interpreter.runProgram('FF|'), 'False', 'Should be False')
+
+    def test_boolean_and(self):
+        interpreter = Interpreter()
+        self.assertEqual(interpreter.runProgram('TT&'), 'True', 'Should be True')
+        self.assertEqual(interpreter.runProgram('TF&'), 'False', 'Should be False')
+        self.assertEqual(interpreter.runProgram('FT&'), 'False', 'Should be False')
+        self.assertEqual(interpreter.runProgram('FF&'), 'False', 'Should be False')
 
 if __name__ == '__main__':
     unittest.main()
