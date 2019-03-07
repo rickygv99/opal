@@ -174,5 +174,10 @@ class TestInterpreter(unittest.TestCase):
         self.assertEqual(interpreter.runProgram('FT&'), 'False', 'Should be False')
         self.assertEqual(interpreter.runProgram('FF&'), 'False', 'Should be False')
 
+    def test_boolean_not(self):
+        interpreter = Interpreter()
+        self.assertEqual(interpreter.runProgram('TN'), 'False', 'Should be False')
+        self.assertEqual(interpreter.runProgram('FN'), 'True', 'Should be True')
+
 if __name__ == '__main__':
     unittest.main()

@@ -181,6 +181,12 @@ class Interpreter:
             elif character is '&': # Boolean AND
                 values = self.getValues(stack, 2)
                 stack.append(values[0] and values[1])
+            elif character is 'N': # Boolean NOT
+                values = self.getValues(stack, 1)
+                if values[0] is True:
+                    stack.append(False)
+                elif values[0] is False:
+                    stack.append(True)
             else:
                 self.throwError("Invalid character: " + character)
         output = ''

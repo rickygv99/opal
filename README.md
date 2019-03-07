@@ -47,6 +47,7 @@ The character *q* is a special character which takes input from the user and sto
 | FALSE | F | F | False |
 | Boolean OR | &#124; | TF&#124; | True |
 | Boolean AND | & | TF& | False |
+| Boolean NOT | N | TN | False |
 | Pop top element off program stack | y | "a""b"y | a |
 | Swap top two elements of program stack | ; | "a""b"; | ba |
 | Duplicate top element of program stack | _ | "a"_ | aa |
