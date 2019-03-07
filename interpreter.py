@@ -117,6 +117,15 @@ class Interpreter:
                 stack.append(math.pi)
             elif character is 'e': # Pushes e onto stack
                 stack.append(math.e)
+            elif character is 's': # Sine function
+                values = self.getValues(stack, 1)
+                stack.append(math.sin(values[0]))
+            elif character is 'c': # Cosine function
+                values = self.getValues(stack, 1)
+                stack.append(math.cos(values[0]))
+            elif character is 't': # Tangent function
+                values = self.getValues(stack, 1)
+                stack.append(math.tan(values[0]))
             elif character is 'v': # Checks if number is prime
                 values = self.getValues(stack, 1)
                 if values[0] < 2:
@@ -130,7 +139,7 @@ class Interpreter:
                             isPrime = False
                             break
                     stack.append(isPrime)
-            elif character is 's': # Computes the sign function (+1, 0, or -1)
+            elif character is 'S': # Computes the sign function (+1, 0, or -1)
                 values = self.getValues(stack, 1)
                 if values[0] > 0:
                     stack.append(1)

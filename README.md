@@ -33,9 +33,12 @@ The character *q* is a special character which takes input from the user and sto
 | Logarithm | b | 82b | 3 |
 | Pi | p | p | 3.141592653589793 |
 | e | e | e | 2.718281828459045 |
+| Sine function | s | ps | 0 |
+| Cosine function | c | pc | -1 |
+| Tangent function | t | pt | 0 |
 | Is prime? | v | 7v | True |
 | Euclidean distance | d | 0043d | 5 |
-| Sign function | s | 4~s | -1 |
+| Sign function | S | 4~S | -1 |
 | # of permutations | P | 53P | 60 |
 | # of combinations | C | 53C | 10 |
 | Greatest common divisor | G | 60@48@G | 12 |

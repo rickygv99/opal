@@ -1,5 +1,6 @@
 from interpreter import Interpreter
 import unittest
+import math
 
 class TestInterpreter(unittest.TestCase):
 
@@ -96,6 +97,18 @@ class TestInterpreter(unittest.TestCase):
         interpreter = Interpreter()
         self.assertEqual(interpreter.runProgram('e'), '2.718281828459045', 'Should be 2.718281828459045')
 
+    def test_sine(self):
+        interpreter = Interpreter()
+        self.assertEqual(math.isclose(float(interpreter.runProgram('ps')), 0, abs_tol=1e-09), True, 'Should be 0')
+
+    def test_cosine(self):
+        interpreter = Interpreter()
+        self.assertEqual(math.isclose(float(interpreter.runProgram('pc')), -1, abs_tol=1e-09), True, 'Should be -1')
+
+    def test_tangent(self):
+        interpreter = Interpreter()
+        self.assertEqual(math.isclose(float(interpreter.runProgram('pt')), 0, abs_tol=1e-09), True, 'Should be 0')
+
     def test_prime(self):
         interpreter = Interpreter()
         self.assertEqual(interpreter.runProgram('21@v'), 'False', 'Should be False')
@@ -111,9 +124,9 @@ class TestInterpreter(unittest.TestCase):
 
     def test_sign_function(self):
         interpreter = Interpreter()
-        self.assertEqual(interpreter.runProgram('4s'), '1', 'Should be 1')
-        self.assertEqual(interpreter.runProgram('4~s'), '-1', 'Should be -1')
-        self.assertEqual(interpreter.runProgram('0s'), '0', 'Should be 0')
+        self.assertEqual(interpreter.runProgram('4S'), '1', 'Should be 1')
+        self.assertEqual(interpreter.runProgram('4~S'), '-1', 'Should be -1')
+        self.assertEqual(interpreter.runProgram('0S'), '0', 'Should be 0')
 
     def test_num_permutations(self):
         interpreter = Interpreter()
