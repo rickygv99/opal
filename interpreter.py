@@ -130,6 +130,14 @@ class Interpreter:
                             isPrime = False
                             break
                     stack.append(isPrime)
+            elif character is 's': # Computes the sign function (+1, 0, or -1)
+                values = self.getValues(stack, 1)
+                if values[0] > 0:
+                    stack.append(1)
+                elif values[0] < 0:
+                    stack.append(-1)
+                else:
+                    stack.append(0)
             elif character is 'd': # Calculates Euclidean distance between two points
                 values = self.getValues(stack, 4)
                 stack.append(math.sqrt((values[2] - values[0]) ** 2 + (values[3] - values[1]) ** 2))

@@ -105,6 +105,16 @@ class TestInterpreter(unittest.TestCase):
         self.assertEqual(interpreter.runProgram('2v'), 'True', 'Should be True')
         self.assertEqual(interpreter.runProgram('29@v'), 'True', 'Should be True')
 
+    def test_distance(self):
+        interpreter = Interpreter()
+        self.assertEqual(interpreter.runProgram('0043d'), '5', 'Should be 5')
+
+    def test_sign_function(self):
+        interpreter = Interpreter()
+        self.assertEqual(interpreter.runProgram('4s'), '1', 'Should be 1')
+        self.assertEqual(interpreter.runProgram('4~s'), '-1', 'Should be -1')
+        self.assertEqual(interpreter.runProgram('0s'), '0', 'Should be 0')
+
     def test_num_permutations(self):
         interpreter = Interpreter()
         self.assertEqual(interpreter.runProgram('53P'), '60', 'Should be 60')
