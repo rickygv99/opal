@@ -35,6 +35,7 @@ The character *q* is a special character which takes input from the user and sto
 | e | e | e | 2.718281828459045 |
 | Is prime? | v | 7v | True |
 | Euclidean distance | d | 0043d | 5 |
+| Sign function | s | 4~s | -1 |
 | # of permutations | P | 53P | 60 |
 | # of combinations | C | 53C | 10 |
 | Greatest common divisor | G | 60@48@G | 12 |
