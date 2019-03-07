@@ -88,7 +88,7 @@ class Interpreter:
                 stack.append(values[0] < values[1])
             elif character is '=': # Equals
                 values = self.getValues(stack, 2)
-                stack.append(values[0] == values[1])
+                stack.append(math.isclose(values[0], values[1], abs_tol=1e-09))
             elif character is '(': # Ceiling funciton
                 values = self.getValues(stack, 1)
                 stack.append(math.ceil(values[0]))
